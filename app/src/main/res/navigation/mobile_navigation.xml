@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_live_results">
+
+    <fragment
+        android:id="@+id/nav_live_results"
+        android:name="com.tech.onlinematka.ui.result.ResultFragment"
+        android:label="@string/menu_live_result"
+        tools:layout="@layout/fragment_result" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.tech.onlinematka.ui.about.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.tech.onlinematka.ui.history.HistoryFragment"
+        android:label="@string/menu_history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.tech.onlinematka.ui.news.NewsFragment"
+        android:label="@string/menu_news"
+        tools:layout="@layout/fragment_news" />
+
+    <fragment
+        android:id="@+id/nav_privacy_policy"
+        android:name="com.tech.onlinematka.ui.privay_policy.PrivacyFragment"
+        android:label="@string/menu_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.tech.onlinematka.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_rating"
+        android:name="com.tech.onlinematka.ui.rating.RatingFragment"
+        android:label="@string/menu_rating"
+        tools:layout="@layout/fragment_rating" />
+
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.tech.onlinematka.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_support"
+        android:name="com.tech.onlinematka.ui.support.SupportFragment"
+        android:label="@string/menu_support"
+        tools:layout="@layout/fragment_support" />
+
+    <fragment
+        android:id="@+id/nav_wallet"
+        android:name="com.tech.onlinematka.ui.wallet.WalletFragment"
+        android:label="@string/menu_wallet"
+        tools:layout="@layout/fragment_wallet" />
+
+
+    <fragment
+        android:id="@+id/nav_withdraw_history"
+        android:name="com.tech.onlinematka.ui.withdraw_history.WithdrawFragment"
+        android:label="@string/menu_withraw_history"
+        tools:layout="@layout/fragment_withdraw_history" />
+
+    <fragment
+        android:id="@+id/nav_exit"
+        android:name="com.tech.onlinematka.ui.exit.ExitFragment"
+        android:label="@string/menu_exit"
+        tools:layout="@layout/fragment_exit" />
+
+    <fragment
+        android:id="@+id/nav_rate_chart"
+        android:name="com.tech.onlinematka.ui.ratechart.RateChartFragment"
+        android:label="@string/menu_rate_chart"
+        tools:layout="@layout/fragment_rate_chart" />
+</navigation>

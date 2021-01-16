@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@drawable/welcome_bg"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/logo_matka"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin panel"
+        android:textSize="@dimen/heading_text_size"
+        android:padding="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_update_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update message"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:background="@drawable/button_shape"
+        android:layout_margin="5dp"
+        />
+    <Button
+        android:id="@+id/btn_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="recharge"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_shape"
+        />
+    <Button
+        android:id="@+id/btn_update_market_status_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update market status and results"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_shape"
+        />
+
+    <Button
+        android:id="@+id/btn_withdraw_request_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="withdraw request and user history"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_shape"
+        />
+
+    <Button
+        android:id="@+id/btn_add_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add news"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_shape"
+        />
+
+    <Button
+        android:id="@+id/btn_user_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="user details"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_shape"
+        />
+
+    <Button
+        android:id="@+id/btn_notifier_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="notifier message"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_shape"
+        />
+
+
+</LinearLayout>
