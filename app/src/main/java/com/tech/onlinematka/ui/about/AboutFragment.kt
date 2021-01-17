@@ -13,22 +13,12 @@ import androidx.lifecycle.Observer
 
 class AboutFragment: Fragment() {
 
-    private lateinit var aboutViewModel: AboutViewModel
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        aboutViewModel =
-            ViewModelProvider(this).get(AboutViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_about, container, false)
-
-        val textView: TextView = root.findViewById(R.id.text_about)
-
-        aboutViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 }

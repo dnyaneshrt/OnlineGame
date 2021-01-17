@@ -66,7 +66,13 @@ class HomeScreenActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        Toast.makeText(this,"wallet cheking..",Toast.LENGTH_SHORT).show()
+        when(item.itemId)
+        {
+            R.id.action_wallet->{
+                Toast.makeText(this,"wallet cheking..",Toast.LENGTH_SHORT).show()
+
+            }
+        }
         return super.onOptionsItemSelected(item)
     }
 

@@ -18,7 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="0.5"
-            android:padding="5dp"
+            android:padding="15dp"
+            android:backgroundTint="@color/red"
             android:text="date" />
 
         <Button
@@ -27,7 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="0.5"
-            android:padding="5dp"
+            android:padding="15dp"
+            android:backgroundTint="@color/red"
             android:text="game type" />
 
 

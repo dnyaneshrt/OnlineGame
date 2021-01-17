@@ -14,6 +14,7 @@ import com.tech.onlinematka.MatkaService
 import com.tech.onlinematka.adapter.MyRecyclerViewAdapter
 import com.tech.onlinematka.R
 import com.tech.onlinematka.data.Entry
+import com.tech.onlinematka.data.Feed
 import com.tech.onlinematka.model.Matka
 import retrofit2.Call
 import retrofit2.Callback
@@ -35,6 +36,10 @@ class ResultFragment : Fragment() {
         recyleViewMarket = view.findViewById(R.id.recycle_view_market)
 
 
+
+
+        getNews()
+
         var list_matka = mutableListOf<Matka>(
             Matka("1.11", "2.22", "kalyan matka", "152 22 454", "updated"),
             Matka("1.11", "2.22", "kalyan matka", "152 22 454", "updated"),
@@ -50,15 +55,13 @@ class ResultFragment : Fragment() {
 
         )
 
-
-
         recyleViewMarket.layoutManager = LinearLayoutManager(requireContext())
 
         myRecyclerViewAdapter= MyRecyclerViewAdapter(requireContext(), list_matka, this)
 
         recyleViewMarket.adapter=myRecyclerViewAdapter
 
-        getNews()
+
 
 
         return view
@@ -71,21 +74,22 @@ class ResultFragment : Fragment() {
 
         val news = MatkaService.newsInstance.getHeadlines()
 
-        news.enqueue(object : Callback<Entry> {
-            override fun onFailure(call: Call<Entry>, t: Throwable) {
+        news.enqueue(object : Callback<Feed> {
+            override fun onFailure(call: Call<Feed>, t: Throwable) {
                Toast.makeText(activity,"error in fetching data",Toast.LENGTH_SHORT).show()
             }
 
-            override fun onResponse(call: Call<Entry>, response: Response<Entry>) {
+            override fun onResponse(call: Call<Feed>, response: Response<Feed>) {
 
                 val mynews = response.body()
 
                 if (mynews != null) {
 
-//                    totalResults = mynews.totalResults    //will get total count here
-//                    cate.addAll(mynews.articles)
-                    myRecyclerViewAdapter.notifyDataSetChanged()
+////                    totalResults = mynews.totalResults    //will get total count here
+////                    cate.addAll(mynews.articles)
+//                    myRecyclerViewAdapter.notifyDataSetChanged()
 
+              Log.d("response",mynews.toString())
 
                 } else {
 

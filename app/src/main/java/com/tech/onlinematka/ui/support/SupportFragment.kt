@@ -1,5 +1,6 @@
 package com.tech.onlinematka.ui.support
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,21 +12,17 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.tech.onlinematka.R
 
-class SupportFragment: Fragment() {
+class SupportFragment : Fragment() {
 
-    private lateinit var supportViewModel: SupportViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        supportViewModel =
-            ViewModelProvider(this).get(SupportViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_support, container, false)
-        val textView: TextView = root.findViewById(R.id.text_support)
-        supportViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+        var inflater = LayoutInflater.from(context)
+        var view = inflater.inflate(R.layout.fragment_support, container, false)
+
+
+        return view
     }
 }
